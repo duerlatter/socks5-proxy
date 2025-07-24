@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<!-- 设置日志文件存储路径（等价于 ${app.home}） -->
+	<property name="APP_HOME" value="${app.home:-./}" />
+
+	<!-- 控制台输出 -->
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level [%logger{1}] - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- 每日滚动文件输出 -->
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${APP_HOME}/logs/server.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${APP_HOME}/logs/server_%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>30</maxHistory> <!-- 可选：最多保留30天的日志 -->
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level [%logger{1}] - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- Netty 单独设置为 WARN -->
+	<logger name="io.netty" level="WARN" />
+
+	<!-- 根日志级别和输出 -->
+	<root level="DEBUG">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="FILE" />
+	</root>
+
+</configuration>
