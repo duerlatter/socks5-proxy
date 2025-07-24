@@ -1,7 +1,3 @@
-Here is the English translation of your README content:
-
----
-
 [English](#README.md) | [中文](#README.zh.md)
 
 # Project Introduction
