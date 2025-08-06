@@ -44,7 +44,7 @@ socks5-proxy/
 
 👉 [Java 客户端](https://github.com/duerlatter/socks5-proxy/tree/main/proxy-client)
 
-👉 [C# 客户端](https://github.com/duerlatter/ProxyClient-cs)
+👉 [C# 客户端](https://github.com/duerlatter/ProxyClient-cs/releases)
 
 ## 🛠️ 构建与运行
 
