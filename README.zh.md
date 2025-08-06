@@ -35,12 +35,16 @@ socks5-proxy/
 
 ## 🧩 主要模块说明
 
-* **proxy-client**：实现 SOCKS5 客户端功能，用于连接 SOCKS5 代理服务器。
+* **proxy-client**：实现 SOCKS5 客户端功能，用于连接 SOCKS5 代理服务器。 
 * **proxy-server**：实现 SOCKS5 代理服务端功能，处理客户端请求并转发数据。
 * **proxy-common**：包含客户端和服务端共享的工具类和常量定义。
 * **proxy-protocol**：定义 SOCKS5 协议相关的请求和响应格式。
 
 ---
+
+👉 [Java 客户端](https://github.com/duerlatter/socks5-proxy/tree/main/proxy-client)
+
+👉 [C# 客户端](https://github.com/duerlatter/ProxyClient-cs)
 
 ## 🛠️ 构建与运行
 
